@@ -45,6 +45,7 @@ Future<SingleUser> getData() async {
                   child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
 
+                      Center(child: Image.network(singleUser.picture!)),
 
                       Text('First Name: '+singleUser.firstName!,style: TextStyle(fontWeight: FontWeight.w800),),
                       Text('Email: '+singleUser.email!,style: TextStyle(fontWeight: FontWeight.w800),),

@@ -44,11 +44,13 @@ class _UserListState extends State<UserList> {
                 Data user = snapshot.data!.elementAt(index);
 
                 return ListTile(
+                  leading: ClipRRect(child: Container(child: Image.network(user.picture!),width: 40,height: 40,),borderRadius: BorderRadius.circular(40),),
                   title: Text(user.firstName!),
                   onTap: (){
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserDetails(userId: user.id!,)));
                   },
                 );
+
               },
             );
           } else {
